@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estudiantes</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" class="font-weight-bold">Estudiantes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link"></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+          </form>
+        </div>
+      </nav>
+    <div id='app' class='row'>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-action active" v-on:click="menu=1" >Registro Estudiantes</li>
+          <li class="list-group-item list-group-item-action active" v-on:click="menu=2">Ver Estudiantes</li>
+          <li class="list-group-item list-group-item-action active" v-on:click="menu=3"> Eliminar Estudiantes</li>
+        </ul>
+        <form-registro v-if="menu==1"></form-registro>
+        <form-verestudiantes v-if="menu==2"></form-verestudiantes>
+        <form-eliminar v-if="menu==3"></form-eliminar>
+
+
+    </div>
+<script src="js/vue.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/app.js"></script>
+<footer class="card-footer bg-dark border-success">
+    <div class="text-center text-white">
+         Contacto: unab.example@unab.edu.co-Tel: 488111858-Colombia<br>
+         Teléfono: 56582515 - Línea gratuita: 01884851008
+    </div>
+ </footer>
+</body>
+</html>
